@@ -208,7 +208,7 @@ export default function Layout() {
           <div className="w-full max-w-md">
             <h4 className="font-serif text-2xl text-[#2D2D2D] mb-2">subscribe to my newsletter</h4>
             <p className="font-sans text-sm text-[#898681] mb-6 leading-relaxed">
-              I write about interesting stuff I'm exploring, technical and non-technical...
+              I write about interesting stuff I'm exploring, technical and non-technical: things I build, tools I use and how I use them, personal experiments, experiences and observations, occasional rants, counterintuitive philosophies, and everything inbetween..
             </p>
 
             <form onSubmit={handleSubscribe} className="relative w-full group">
