@@ -64,7 +64,7 @@ export default function Home() {
   const handleHireMe = (e: React.MouseEvent) => {
     e.preventDefault(); // Stop immediate open
     showToast("Initializing secure mail channel...");
-
+    
     // Wait 1.5s then open mail
     setTimeout(() => {
       window.location.href = "mailto:email@me.com";
@@ -128,7 +128,7 @@ export default function Home() {
       </section> */}
 
         {/* TEXT CONTAINER */}
-        {/* <div className="w-full md:w-2/3 pt-8 md:pt-0 text-center md:text-left">
+        <div className="w-full md:w-2/3 pt-8 md:pt-0 text-center md:text-left">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -168,62 +168,6 @@ export default function Home() {
                 className="group flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#2D2D2D] border-b border-[#2D2D2D]/30 pb-1 hover:border-[#C65D3B] hover:text-[#C65D3B] transition-all duration-300"
               >
                 Show me the Code
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-
-            </div>
-          </motion.div>
-        </div> */}
-        {/* TEXT CONTAINER */}
-        <div className="w-full md:w-2/3 pt-8 md:pt-0 text-left"> {/* CHANGED: Removed text-center */}
-
-          {/* HEADLINE: Scaled down for mobile (text-4xl), large on desktop */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-serif font-bold leading-[1.1] tracking-tight text-[#2D2D2D] mb-6 md:mb-8"
-          >
-            Solid Architecture.<br />
-            <span className="text-[#898681] italic font-serif font-light">Systems that Scale.</span>
-          </motion.h1>
-
-          {/* BODY COPY: Left aligned, better leading */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col gap-6 font-sans text-base md:text-lg text-[#5a5a5a] max-w-xl leading-relaxed"
-          >
-            <p>
-              I write code to solve problems. I love building cool stuff. As said in my headlines, I prioritize <strong className="text-[#2D2D2D] font-medium">clean patterns</strong>, <strong className="text-[#2D2D2D] font-medium">scalable decisions</strong>, and—most importantly—the end-user experience.
-            </p>
-
-            <p>
-              I don't know everything, but I can figure anything out. I am looking for high-autonomy roles contributing to <strong className="text-[#2D2D2D] font-medium">meaningful engineering challenges</strong>.
-            </p>
-
-            <p>
-              If your culture is built on <strong className="text-[#2D2D2D] font-medium">rapid iteration</strong> and <strong className="text-[#2D2D2D] font-medium">radical candor</strong>, let's build something that matters.
-            </p>
-
-            {/* ACTION BUTTONS - Left Aligned & Stacked properly */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6">
-
-              {/* 1. Primary Action */}
-              <a
-                href="mailto:your@email.com"
-                className="px-8 py-3 bg-[#2D2D2D] text-[#F4F0E8] rounded-full font-mono text-xs uppercase tracking-widest hover:bg-[#C65D3B] transition-colors duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 transform w-full sm:w-auto text-center"
-              >
-                Let's Talk
-              </a>
-
-              {/* 2. Secondary Action */}
-              <Link
-                to="/projects"
-                className="group flex items-center gap-2 font-serif text-[#2D2D2D] border-b border-[#2D2D2D]/30 pb-1 hover:border-[#C65D3B] hover:text-[#C65D3B] transition-all duration-300"
-              >
-                Show me the code
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
 
