@@ -53,12 +53,12 @@ export default function Projects() {
   };
 
   return (
-    <div className="pt-12 md:pt-24 max-w-screen-2xl mx-auto">
+    <div className="pt-0 md:pt-12 max-w-screen-2xl mx-auto">
 
       {/* HEADER */}
-      <section className="mb-24 border-b border-[#D3D9D4] pb-8 flex items-end justify-between">
+      <section className="mb-12 md:mb-24 border-b border-[#D3D9D4] pb-8 flex items-end justify-between">
         <div>
-          <h1 className="font-serif text-5xl md:text-7xl text-[#2D2D2D] mb-6">Dev and Prod</h1>
+          <h1 className="font-serif text-4xl md:text-7xl text-[#2D2D2D] mb-4 md:mb-6">Dev and Prod</h1>
           <p className="font-mono text-xs text-[#898681] uppercase tracking-widest flex items-center gap-2">
             <Layers size={14} /> // Systems Engineering & Open Source
           </p>
@@ -74,39 +74,39 @@ export default function Projects() {
           <motion.div
             key={project.id}
             variants={item}
-            className="group relative border-b border-[#D3D9D4] py-12 transition-all duration-500 hover:bg-[#EBE7DF]/40 -mx-6 px-6 md:-mx-12 md:px-12"
+            className="group relative border-b border-[#D3D9D4] py-8 md:py-12 transition-all duration-500 hover:bg-[#EBE7DF]/40 -mx-6 px-6 md:-mx-12 md:px-12"
           >
-            <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 md:gap-12">
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 md:gap-12">
 
               {/* 1. IDENTITY (Left) */}
               <div className="md:w-1/4">
-                <div className="flex items-baseline gap-4 mb-4">
-                  <h3 className="font-tech text-3xl font-bold text-[#2D2D2D] uppercase tracking-tight group-hover:text-[#C65D3B] transition-colors">
+                <div className="flex items-baseline gap-4 mb-2 md:mb-4">
+                  <h3 className="font-tech text-2xl md:text-3xl font-bold text-[#2D2D2D] uppercase tracking-tight group-hover:text-[#C65D3B] transition-colors">
                     {project.name}
                   </h3>
                 </div>
-                <span className="font-mono text-xs text-[#898681] border border-[#D3D9D4] px-3 py-1 rounded-full inline-block">
+                <span className="font-mono text-[10px] md:text-xs text-[#898681] border border-[#D3D9D4] px-3 py-1 rounded-full inline-block">
                   {project.year}
                 </span>
               </div>
 
               {/* 2. LOGIC (Middle) */}
               <div className="md:w-2/4 max-w-2xl">
-                <p className="font-sans text-lg text-[#5a5a5a] leading-relaxed group-hover:text-[#2D2D2D] transition-colors">
+                <p className="font-sans text-base md:text-lg text-[#5a5a5a] leading-relaxed group-hover:text-[#2D2D2D] transition-colors">
                   {project.description}
                 </p>
               </div>
 
               {/* 3. SPECS & ACTIONS (Right) */}
-              <div className="md:w-1/4 flex flex-col items-start md:items-end justify-between gap-8">
+              <div className="md:w-1/4 flex flex-col items-start md:items-end justify-between gap-6 md:gap-8">
 
                 {/* Tech Stack List */}
-                <div className="font-mono text-xs text-[#898681] uppercase tracking-wider text-right">
+                <div className="font-mono text-xs text-[#898681] uppercase tracking-wider text-left md:text-right mt-2 md:mt-0">
                   {project.stack.join(" | ")}
                 </div>
 
-                {/* Action Icons (Slide in on hover) */}
-                <div className="flex items-center gap-6 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
+                {/* Action Icons (Slide in on hover Desktop, always visible Mobile) */}
+                <div className="flex items-center gap-6 opacity-100 translate-x-0 md:opacity-0 md:translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500 ease-out">
                   <a href={project.link} target="_blank" aria-label="View Source" className="text-[#2D2D2D] hover:text-[#C65D3B] transition-colors">
                     <Github size={24} strokeWidth={1.5} />
                   </a>
@@ -114,7 +114,6 @@ export default function Projects() {
                     <ArrowUpRight size={24} strokeWidth={1.5} />
                   </a>
                 </div>
-
               </div>
             </div>
           </motion.div>

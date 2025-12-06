@@ -13,12 +13,12 @@ const ENTROPY_ITEMS = [
 
 export default function Entropy() {
   return (
-    <div className="pt-12 md:pt-24 min-h-screen">
+    <div className="pt-0 md:pt-12 min-h-screen">
 
       {/* HEADER */}
-      <section className="mb-20 border-b border-[#D3D9D4] pb-8 flex justify-between items-end">
+      <section className="mb-12 md:mb-20 border-b border-[#D3D9D4] pb-8 flex justify-between items-end">
         <div>
-          <h1 className="font-brand font-extrabold text-5xl md:text-7xl text-[#2D2D2D] mb-4">ENTROPY</h1>
+          <h1 className="font-brand font-extrabold text-4xl md:text-7xl text-[#2D2D2D] mb-4">ENTROPY</h1>
           <p className="font-mono text-xs text-[#898681] uppercase tracking-widest max-w-md leading-relaxed">
             // A collection of unstructured data. <br />
             // Photos, links, and opus from the system.
